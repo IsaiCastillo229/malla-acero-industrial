@@ -1,0 +1,22 @@
+<mat-toolbar color="primary" class="footer-toolbar">
+  <div class="footer-content">
+    <div class="footer-section">
+      <p class="copyright">
+        © {{ currentYear }} Malla Acero Industrial. Todos los derechos reservados.
+      </p>
+    </div>
+    
+    <div class="footer-section">
+      <nav class="footer-links">
+        <a 
+          *ngFor="let link of footerLinks" 
+          [routerLink]="link.route" 
+          mat-button
+          class="footer-link"
+        >
+          {{ link.label }}
+        </a>
+      </nav>
+    </div>
+  </div>
+</mat-toolbar>

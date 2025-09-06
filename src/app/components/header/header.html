@@ -1,0 +1,20 @@
+<mat-toolbar color="primary" class="header-toolbar">
+  <div class="header-content">
+    <!-- Menu Button -->
+    <button mat-icon-button [matMenuTriggerFor]="menu" class="menu-button">
+      <mat-icon>menu</mat-icon>
+    </button>
+    
+    <mat-menu #menu="matMenu" class="custom-menu">
+      <button mat-menu-item *ngFor="let item of menuItems" [routerLink]="item.route" routerLinkActive="active">
+        <mat-icon>{{ item.icon }}</mat-icon>
+        <span>{{ item.label }}</span>
+      </button>
+    </mat-menu>
+
+    <!-- Logo -->
+    <div class="logo">
+      <img src="/img/logotipo.png" alt="Malla Acero Industrial" class="logo-image">
+    </div>
+  </div>
+</mat-toolbar>

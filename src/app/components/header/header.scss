@@ -1,0 +1,109 @@
+.header-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background: linear-gradient(135deg, #1565c0, #0d47a1) !important;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.menu-button {
+  color: white;
+  margin-right: 16px;
+  
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.custom-menu {
+  .mat-mdc-menu-item {
+    color: #1565c0;
+    
+    &.active {
+      background-color: rgba(21, 101, 192, 0.1);
+      color: #0d47a1;
+    }
+    
+    &:hover {
+      background-color: rgba(21, 101, 192, 0.1);
+    }
+    
+    mat-icon {
+      color: #ff8f00;
+      margin-right: 8px;
+    }
+  }
+}
+
+.logo {
+  flex: 0 0 auto;
+  text-align: left;
+  margin-left: 0;
+  
+  .logo-image {
+    height: 160px;
+    width: auto;
+    max-width: 500px;
+    object-fit: contain;
+  }
+}
+
+
+// Responsive design
+@media (max-width: 1024px) {
+  .header-content {
+    padding: 0 12px;
+  }
+  
+  .logo .logo-image {
+    height: 130px;
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    padding: 0 8px;
+  }
+  
+  .logo .logo-image {
+    height: 110px;
+    max-width: 380px;
+  }
+  
+  .menu-button {
+    margin-right: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-content {
+    padding: 0 4px;
+  }
+  
+  .logo .logo-image {
+    height: 90px;
+    max-width: 320px;
+  }
+  
+  .menu-button {
+    margin-right: 4px;
+  }
+}
+
+@media (max-width: 360px) {
+  .logo .logo-image {
+    height: 80px;
+    max-width: 280px;
+  }
+}

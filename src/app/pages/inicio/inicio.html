@@ -1,0 +1,49 @@
+<!-- Hero Banner -->
+<section class="hero-banner">
+  <div class="hero-content">
+    <h1 class="hero-title">Instalación y Venta de Malla Acero Industrial</h1>
+    <p class="hero-subtitle">Protección, seguridad y calidad en cada proyecto</p>
+    <div class="hero-actions">
+      <button mat-raised-button color="accent" routerLink="/servicios" class="cta-button">
+        Ver Servicios
+      </button>
+      <button mat-stroked-button color="accent" routerLink="/contacto" class="cta-button">
+        Contactar
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Product Images Gallery -->
+<section class="gallery-section">
+  <div class="container">
+    <h2 class="section-title">Nuestros Productos</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item" *ngFor="let img of productImages">
+        <img [src]="img.src" [alt]="img.alt" class="gallery-image">
+        <div class="gallery-overlay">
+          <h3>{{ img.title }}</h3>
+          <p>{{ img.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="features-section">
+  <div class="container">
+    <h2 class="section-title">¿Por qué elegirnos?</h2>
+    <div class="features-grid">
+      <mat-card *ngFor="let feature of features" class="feature-card">
+        <mat-card-content>
+          <div class="feature-icon">
+            <mat-icon>{{ feature.icon }}</mat-icon>
+          </div>
+          <h3 class="feature-title">{{ feature.title }}</h3>
+          <p class="feature-description">{{ feature.description }}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,48 @@
+<!-- Page Header -->
+<section class="page-header">
+  <div class="container">
+    <h1 class="page-title">Nuestros Servicios</h1>
+    <p class="page-subtitle">
+      Ofrecemos una amplia gama de productos y servicios para la protección perimetral
+    </p>
+  </div>
+</section>
+
+<!-- Services Grid -->
+<section class="services-section">
+  <div class="container">
+    <div class="services-grid">
+      <mat-card *ngFor="let servicio of servicios" class="service-card">
+        <mat-card-header>
+          <div class="service-icon">
+            <mat-icon>{{ servicio.icon }}</mat-icon>
+          </div>
+          <mat-card-title class="service-title">{{ servicio.title }}</mat-card-title>
+        </mat-card-header>
+        
+        <mat-card-content>
+          <p class="service-description">{{ servicio.description }}</p>
+          
+          <div class="service-features">
+            <h4>Características:</h4>
+            <ul>
+              <li *ngFor="let feature of servicio.features">{{ feature }}</li>
+            </ul>
+          </div>
+        </mat-card-content>
+        
+        <mat-card-actions>
+          <button 
+            mat-raised-button 
+            color="primary" 
+            class="contact-button"
+            (click)="contactWhatsApp(servicio.title)"
+          >
+            <img src="/img/whatsapp.png" alt="WhatsApp" class="whatsapp-icon">
+            Solicitar Presupuesto
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</section>
